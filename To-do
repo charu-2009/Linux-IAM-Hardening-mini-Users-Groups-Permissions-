@@ -1,0 +1,38 @@
+To-do: 
+
+
+
+
+Create a baseline policy document: who needs sudo, group roles, and file access requirements for a small team (e.g., admin, dev, auditor).
+
+
+
+
+On an Ubuntu VM, create users and groups according to the policy (use useradd, groupadd).
+
+
+
+
+Assign minimal privileges: configure sudoers using any text editor with least-privilege rules, set sudo rules for specific commands only.
+
+
+
+
+Use POSIX permissions + ACLs for a shared project folder so that only the intended group has write access; others have read-only.
+
+
+
+
+Enable simple auditing (auditd) to log changes to /etc/sudoers and /etc/passwd.
+
+
+
+
+In a separate vulnerable snapshot (instructor provides or students intentionally misconfigure), identify three misconfigurations (e.g., world-writable /etc/cron.d, unrestricted sudo NOPASSWD, weak file permissions on sensitive files).
+
+
+
+
+Fix those misconfigurations, document steps, and show before/after evidence (ls -l, getfacl, audit logs).
+
+Produce a remediation checklist and a short policy document for ongoing user management.
